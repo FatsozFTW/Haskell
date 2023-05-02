@@ -1,0 +1,24 @@
+evalErr (Num 1)
+evalErr (Plus (Num 1) (Num 1))
+evalErr (Minus (Num 4) (Num 1))
+evalErr (Mult (Num 2) (Num 2))
+evalErr (Sqr (Num 3))
+
+evalMaybe (Num 1)
+evalMaybe (Plus (Num 1) (Num 1))
+evalMaybe (Minus (Num 4) (Num 1))
+evalMaybe (Mult (Num 2) (Num 2))
+evalMaybe (Sqr (Num 3))
+
+evalM (Num 1)
+evalM (Plus (Num 1) (Num 1))
+evalM (Minus (Num 4) (Num 1))
+evalM (Mult (Num 2) (Num 2))
+evalM (Sqr (Num 3))
+
+
+interpCALC "1"
+interpCALC "1+1"
+interpCALC "4-1"
+interpCALC "2*2"
+interpCALC "sqr(3)"

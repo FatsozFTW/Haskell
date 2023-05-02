@@ -1,0 +1,6 @@
+
+evalMaybe (Div (Num 1) (Num 0))
+
+evalM (Div (Num 1) (Num 0))
+
+evalErr (Div (Num 1) (Num 0))

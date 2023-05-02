@@ -1,0 +1,5 @@
+evalMaybe (Minus (Num 1) (Num 2))
+
+evalM (Minus (Num 1) (Num 2))
+
+evalErr (Minus (Num 1) (Num 2))

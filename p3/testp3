@@ -1,0 +1,58 @@
+putStrLn "------------------------------------"
+putStrLn "EvalM"
+putStrLn "------------------------------------"
+evalM [] (Num 1)
+evalM [] (Plus (Num 1) (Num 1))
+evalM [] (Minus (Num 4) (Num 1))
+evalM [] (Mult (Num 2) (Num 2))
+evalM [] (Div (Num 1) (Num 0))
+evalM [] (Leq (Num 0) (Num 6))
+evalM [] (IsZero (Num 0))
+evalM [] (IsZero (Num 5))
+evalM [] (And (Boolean False) (Boolean True))
+evalM [] (Or (Boolean False) (Boolean True))
+evalM [] (If (Boolean False) (Num 4) (Num 5))
+evalM [] (If (Boolean True) (Num 4) (Num 5))
+evalM [] (Bind "x" (Boolean True) (If (Id "x") (Num 3) (Num 11)))
+evalM [] (Bind "x" (Num 4) (Plus (Id "x") (Plus (Num 3) (Num 33))))
+
+putStrLn "------------------------------------"
+putStrLn "typeofM"
+putStrLn "------------------------------------"
+
+typeofM [] (Num 1)
+typeofM [] (Plus (Num 1) (Num 1))
+typeofM [] (Minus (Num 4) (Num 1))
+typeofM [] (Mult (Num 2) (Num 2))
+typeofM [] (Div (Num 1) (Num 0))
+typeofM [] (Leq (Num 0) (Num 6))
+typeofM [] (IsZero (Num 0))
+typeofM [] (IsZero (Num 5))
+typeofM [] (And (Boolean False) (Boolean True))
+typeofM [] (Or (Boolean False) (Boolean True))
+typeofM [] (If (Boolean False) (Num 4) (Num 5))
+typeofM [] (If (Boolean True) (Num 4) (Num 5))
+typeofM [] (Bind "x" (Boolean True) (If (Id "x") (Num 3) (Num 11)))
+typeofM [] (Bind "x" (Num 4) (Plus (Id "x") (Plus (Num 3) (Num 33))))
+
+putStrLn "------------------------------------"
+putStrLn "EvalT"
+putStrLn "------------------------------------"
+
+evalT (Num (-2))
+evalT (Num 1)
+evalT (Plus (Num 1) (Num 1))
+evalT (Minus (Num 4) (Num 1))
+evalT (Mult (Num 2) (Num 2))
+evalT (Div (Num 1) (Num 0))
+evalT (Leq (Num 0) (Num 6))
+evalT (IsZero (Num 0))
+evalT (IsZero (Num 5))
+evalT (And (Boolean False) (Boolean True))
+evalT (Or (Boolean False) (Boolean True))
+evalT (If (Boolean False) (Num 4) (Num 5))
+evalT (If (Boolean True) (Num 4) (Num 5))
+evalT (Bind "x" (Boolean True) (If (Id "x") (Num 3) (Num 11)))
+evalT (Bind "x" (Num 4) (Plus (Id "x") (Plus (Num 3) (Num 33))))
+
+

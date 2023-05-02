@@ -1,0 +1,30 @@
+optimize (Num 1)
+optimize (Plus (Num 5) (Num 0))
+optimize (Plus (Num 5) (Num 2))
+optimize (Minus (Num 5) (Num 0))
+optimize (Minus (Num 5) (Num 2))
+optimize (Mult (Num 5) (Num 0))
+optimize (Mult (Num 5) (Num 2))
+
+optimize (And (Boolean True) (Boolean True))
+optimize (And (Boolean True) (Boolean False))
+optimize (And (Boolean False) (Boolean True))
+optimize (And (Boolean False) (Boolean False))
+
+optimize (Or (Boolean True) (Boolean True))
+optimize (Or (Boolean True) (Boolean False))
+optimize (Or (Boolean False) (Boolean True))
+optimize (Or (Boolean False) (Boolean False))
+
+optimize (Div (Num 5) (Num 0))
+
+optimize (IsZero (Num 0))
+optimize (IsZero (Num 5))
+
+optimize (If (Boolean True) (Num 4) (Num 5))
+optimize (If (Boolean False) (Num 4) (Num 5))
+
+optimize (And (And (Boolean True) (Boolean True)) (Boolean True))
+
+interpOptEval(Num 1)
+interpOptEval(And (And (Boolean True) (Boolean True)) (Boolean True))
